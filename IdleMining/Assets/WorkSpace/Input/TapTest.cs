@@ -4,7 +4,7 @@ public class TapTest : MonoBehaviour
 {
     [SerializeField]
     int GetMoney = 100;
-    int HaveMoney = 0;
+   public int HaveMoney = 0;
     void Update()
     {
         if (Input.touchCount > 0)
