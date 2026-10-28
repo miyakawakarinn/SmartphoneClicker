@@ -1,22 +1,18 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TapTest : MonoBehaviour
 {
     [SerializeField]
     int GetMoney = 100;
-   public int HaveMoney = 0;
-    void Update()
-    {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
 
-            if (touch.phase == TouchPhase.Began)
-            {
-                Debug.Log("タップ開始！");
-                HaveMoney += GetMoney;
-                Debug.Log("所持金: " + HaveMoney);
-            }
-        }
+    public int HaveMoney = 0;
+
+    public void Dig()
+    {
+        HaveMoney += GetMoney;
+
+        Debug.Log("採掘！");
+        Debug.Log("所持金: " + HaveMoney);
     }
 }
